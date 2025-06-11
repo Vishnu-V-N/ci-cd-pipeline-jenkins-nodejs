@@ -1,0 +1,24 @@
+{
+  "name": "ci-cd-pipeline-jenkins-nodejs",
+  "version": "1.0.0",
+  "description": "CI/CD pipeline using Jenkins and Docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vishnu-V-N/ci-cd-pipeline-jenkins-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vishnu-V-N/ci-cd-pipeline-jenkins-nodejs/issues"
+  },
+  "homepage": "https://github.com/Vishnu-V-N/ci-cd-pipeline-jenkins-nodejs#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {}
+}
