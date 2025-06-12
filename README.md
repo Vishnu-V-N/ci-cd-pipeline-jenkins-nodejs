@@ -1,4 +1,3 @@
-# ci-cd-pipeline-jenkins-nodejs
 # CI/CD Pipeline with Jenkins and Node.js
 
 This project demonstrates a complete CI/CD pipeline using Jenkins for a Node.js application.
