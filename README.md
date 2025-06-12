@@ -28,5 +28,6 @@ Visit: `http://localhost:3000` to see the app running inside Docker container.
 
 ---
 
-✅ Screenshot: _(Add screenshot of your Jenkins job success)_
+![image](https://github.com/user-attachments/assets/21cc27f5-02fa-43f0-9ccc-351ffd76560e)
+
 
