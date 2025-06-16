@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Vishnu-V-N/ci-cd-pipeline-jenkins-nodejs.git'
+                git 'https://github.com/Vishnu-V-N/ci-cd-pipeline-jenkins-nodejs.git'
             }
         }
 
@@ -22,7 +22,9 @@ pipeline {
 
         stage('Stop Existing Container') {
             steps {
-                bat 'docker rm -f $(docker ps -q --filter "ancestor=ci-cd-app") || exit 0'
+                bat '''
+                FOR /F "tokens=*" %%i IN ('docker ps -q --filter "ancestor=ci-cd-app"') DO docker rm -f %%i
+                '''
             }
         }
 
