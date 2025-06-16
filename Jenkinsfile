@@ -20,14 +20,13 @@ pipeline {
             }
         }
 
-        stage('Stop Existing Container') {
-            steps {
-                bat '''
-                FOR /F "tokens=*" %%i IN ('docker ps -q --filter "ancestor=ci-cd-app"') DO docker rm -f %%i
-                '''
-            }
-        }
-
+       stage('Stop Existing Container') {
+    steps {
+        bat '''
+        FOR /F "tokens=*" %%i IN ('docker ps -q --filter "ancestor=ci-cd-app"') DO docker rm -f %%i
+        '''
+    }
+}
         stage('Run Docker Container') {
             steps {
                 bat 'docker run -d -p 3000:3000 ci-cd-app'
