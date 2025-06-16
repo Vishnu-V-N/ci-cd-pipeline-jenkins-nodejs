@@ -20,6 +20,12 @@ pipeline {
             }
         }
 
+        stage('Stop Existing Container') {
+            steps {
+                bat 'docker rm -f $(docker ps -q --filter "ancestor=ci-cd-app") || exit 0'
+            }
+        }
+
         stage('Run Docker Container') {
             steps {
                 bat 'docker run -d -p 3000:3000 ci-cd-app'
